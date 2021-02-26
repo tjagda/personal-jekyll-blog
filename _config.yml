@@ -1,0 +1,20 @@
+title: Josh Agda
+logo: /assets/img/logo.png
+description: Personal blog about yours truly
+show_downloads: false
+google_analytics:
+theme: jekyll-theme-minimal
+
+github: https://github.com/tjagda
+linkedin: https://github.com/tjagda
+email: timothyjoshagda@gmail.com
+
+github_img: /assets/img/github.png
+linkedin_img: /assets/img/linkedin.png
+email_img: /assets/img/email.png
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true

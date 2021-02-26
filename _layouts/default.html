@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/custom.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
+        
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+
+        {% for post in site.posts %}
+            <p class="view"><a href="{{ post.url }}">{{ post.title }}</a></p>
+        {% endfor %}
+
+        <ul>
+          <li><a href="{{ site.github }}"><img class="logo-small" src="{{ site.github_img }}" alt="@tjagda"><br>GitHub</a></li>
+          <li><a href="{{ site.linkedin }}"><img class="logo-small" src="{{ site.linkedin_img }}" alt="@timothyjoshagda"><br>Linkedin</a></li>
+          <li><a href="mailto:{{ site.email }}"><img class="logo-small" src="{{ site.email_img }}" alt="timothyjoshagda@gmail.com"><br>Email</a></li>
+        </ul>
+
+      </header>
+      <section>
+
+      {{ content }}
+
+      <button onclick="topFunction()" id="myBtn" title="Go to top">&#10148;</button> 
+      </section>
+      <footer>
+      </footer>
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script>
+      //Get the button:
+      mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      } 
+    </script>
+  </body>
+</html>
